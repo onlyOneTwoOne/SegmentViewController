@@ -25,6 +25,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+    self.title = @"Demo";
     [self initViewController];
 }
 
@@ -34,7 +35,10 @@
                           @"热门",
                           @"要闻",
                           @"体育",
-                          @"资讯"
+                          @"资讯",
+                          @"娱乐",
+                          @"NBA",
+                          @"彩票"
                           ];
     
     NSMutableArray *items = @[].mutableCopy;
