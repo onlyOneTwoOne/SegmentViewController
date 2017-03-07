@@ -51,13 +51,14 @@
     self.segmentedView = ({
         
         LTUnderLineSegmentedView *segmentedView = [[LTUnderLineSegmentedView alloc] initWithItems:[items copy]];
+        segmentedView.frame = CGRectMake(0, 0, self.view.frame.size.width, 44);
         segmentedView.underLineColor = [UIColor whiteColor];//UIColorRGB(0x00A0FF);
         segmentedView.underLineWidthFlexible = YES;
         segmentedView.backgroundColor = [UIColor redColor];
-        segmentedView.numberOfItemsPerScreen = 4;
+        segmentedView.numberOfItemsPerScreen = 4;//每屏segment个数，4.5->4个半...
         segmentedView.needDisplayEdgeMask = YES;
-        segmentedView.edgeMaskLayerColor = [UIColor whiteColor];
-        segmentedView.edgeMaskLayerWidth = 20.f;
+        segmentedView.edgeMaskLayerColor = [UIColor whiteColor]; //2侧边缘半透明阴影颜色
+        segmentedView.edgeMaskLayerWidth = 20.f;//半透明阴影渲染宽度
         segmentedView;
     });
     

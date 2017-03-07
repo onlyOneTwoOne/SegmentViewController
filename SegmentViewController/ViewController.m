@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "TestTableViewCell.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -28,14 +28,14 @@
 
 #pragma mark －UITableViewDataSource
 - (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 20;
+    return 200;
 }
 
 - (UITableViewCell*) tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     NSString *cellId = @"cellID";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+    TestTableViewCell *cell = (TestTableViewCell *)[tableView dequeueReusableCellWithIdentifier:cellId];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+        cell = [[TestTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
     }
     cell.textLabel.text = [NSString stringWithFormat:@"view_%zd",indexPath.row];
     
@@ -48,7 +48,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 50;
+    return 200;
 }
 
 
